@@ -249,8 +249,10 @@ position = Vector2(240, 96)
 
 [node name="RangedGuard1" parent="." instance=ExtResource("7_rangedscene")]
 position = Vector2(120, 68)
+monster_type = "blue_shotgun"
 
 [node name="RangedGuard2" parent="." instance=ExtResource("7_rangedscene")]
 position = Vector2(360, 68)
+monster_type = "gunjurer"
 
 [node name="HUD" parent="." instance=ExtResource("6_hudscene")]

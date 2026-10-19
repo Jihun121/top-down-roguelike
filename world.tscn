@@ -247,12 +247,19 @@ position = Vector2(424, 72)
 position = Vector2(240, 268)
 
 [node name="Enemy" parent="." unique_id=154995623 instance=ExtResource("3_tlwt5")]
-position = Vector2(160, 100)
+position = Vector2(160, 105)
+monster_type = "bullet_kin"
 
 [node name="Enemy2" parent="." unique_id=1136132353 instance=ExtResource("3_tlwt5")]
-position = Vector2(320, 100)
+position = Vector2(320, 105)
+monster_type = "bullet_kin"
 
-[node name="Enemy3" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(240, 72)
+[node name="Bullat1" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(180, 62)
+monster_type = "bullat"
+
+[node name="Bullat2" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(300, 62)
+monster_type = "bullat"
 
 [node name="HUD" parent="." instance=ExtResource("6_hudscene")]

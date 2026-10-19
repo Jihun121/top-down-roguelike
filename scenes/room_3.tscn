@@ -241,31 +241,28 @@ position = Vector2(424, 128)
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
 position = Vector2(240, 268)
 
-[node name="Enemy1" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(105, 155)
-move_speed = 52.0
-max_hp = 4
+[node name="BlueShotgun1" parent="." instance=ExtResource("7_rangedscene")]
+position = Vector2(115, 145)
+monster_type = "blue_shotgun"
 
-[node name="Enemy2" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(375, 155)
-move_speed = 52.0
-max_hp = 4
+[node name="BlueShotgun2" parent="." instance=ExtResource("7_rangedscene")]
+position = Vector2(365, 145)
+monster_type = "blue_shotgun"
 
-[node name="Enemy3" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(180, 95)
-max_hp = 4
+[node name="BlueShotgun3" parent="." instance=ExtResource("7_rangedscene")]
+position = Vector2(240, 100)
+monster_type = "blue_shotgun"
 
-[node name="Enemy4" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(300, 95)
-max_hp = 4
-
-[node name="RangedEnemy1" parent="." instance=ExtResource("7_rangedscene")]
+[node name="Sniper1" parent="." instance=ExtResource("7_rangedscene")]
 position = Vector2(75, 52)
+monster_type = "sniper_kin"
 
-[node name="RangedEnemy2" parent="." instance=ExtResource("7_rangedscene")]
+[node name="Sniper2" parent="." instance=ExtResource("7_rangedscene")]
 position = Vector2(240, 48)
+monster_type = "sniper_kin"
 
-[node name="RangedEnemy3" parent="." instance=ExtResource("7_rangedscene")]
+[node name="Sniper3" parent="." instance=ExtResource("7_rangedscene")]
 position = Vector2(405, 52)
+monster_type = "sniper_kin"
 
 [node name="HUD" parent="." instance=ExtResource("6_hudscene")]

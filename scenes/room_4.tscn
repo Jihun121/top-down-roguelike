@@ -241,36 +241,28 @@ position = Vector2(240, 152)
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
 position = Vector2(240, 268)
 
-[node name="Enemy1" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(110, 145)
-move_speed = 54.0
-max_hp = 5
+[node name="GunNut1" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(125, 140)
+monster_type = "gun_nut"
 
-[node name="Enemy2" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(370, 145)
-move_speed = 54.0
-max_hp = 5
+[node name="GunNut2" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(355, 140)
+monster_type = "gun_nut"
 
-[node name="Enemy3" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(195, 85)
-move_speed = 56.0
-max_hp = 5
+[node name="GunNut3" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(240, 95)
+monster_type = "gun_nut"
 
-[node name="Enemy4" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(285, 85)
-move_speed = 56.0
-max_hp = 5
-
-[node name="RangedEnemy1" parent="." instance=ExtResource("7_rangedscene")]
+[node name="Gunjurer1" parent="." instance=ExtResource("7_rangedscene")]
 position = Vector2(115, 56)
+monster_type = "gunjurer"
 
-[node name="RangedEnemy2" parent="." instance=ExtResource("7_rangedscene")]
+[node name="Gunjurer2" parent="." instance=ExtResource("7_rangedscene")]
 position = Vector2(365, 56)
+monster_type = "gunjurer"
 
-[node name="RangedEnemy3" parent="." instance=ExtResource("7_rangedscene")]
-position = Vector2(140, 200)
-
-[node name="RangedEnemy4" parent="." instance=ExtResource("7_rangedscene")]
-position = Vector2(340, 200)
+[node name="Gunjurer3" parent="." instance=ExtResource("7_rangedscene")]
+position = Vector2(240, 52)
+monster_type = "gunjurer"
 
 [node name="HUD" parent="." instance=ExtResource("6_hudscene")]

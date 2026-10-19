@@ -251,17 +251,22 @@ position = Vector2(240, 268)
 
 [node name="Enemy1" parent="." instance=ExtResource("3_tlwt5")]
 position = Vector2(130, 130)
+monster_type = "grenade_kin"
 
 [node name="Enemy2" parent="." instance=ExtResource("3_tlwt5")]
 position = Vector2(350, 130)
+monster_type = "grenade_kin"
 
 [node name="Enemy3" parent="." instance=ExtResource("3_tlwt5")]
 position = Vector2(240, 105)
+monster_type = "grenade_kin"
 
 [node name="RangedEnemy1" parent="." instance=ExtResource("7_rangedscene")]
 position = Vector2(120, 56)
+monster_type = "red_shotgun"
 
 [node name="RangedEnemy2" parent="." instance=ExtResource("7_rangedscene")]
 position = Vector2(360, 56)
+monster_type = "red_shotgun"
 
 [node name="HUD" parent="." instance=ExtResource("6_hudscene")]
