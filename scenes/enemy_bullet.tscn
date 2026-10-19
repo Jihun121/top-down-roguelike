@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy_bullet.gd" id="1_ebscript"]
+[ext_resource type="Texture2D" uid="uid://c4icdchg4vsbd" path="res://assets/gungeon/enemy_bullet_orb.png" id="2_ebtex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eb"]
+radius = 4.0
+
+[node name="EnemyBullet" type="Area2D" groups=["enemy_bullets"]]
+script = ExtResource("1_ebscript")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("2_ebtex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_eb")

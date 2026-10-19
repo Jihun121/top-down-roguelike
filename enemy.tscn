@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://crqme2t20q7x5"]
+
+[ext_resource type="Script" uid="uid://c4shlbt74nnod" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://cq2pilleowtow" path="res://assets/gungeon/bullet_kin.png" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://bwts6st56kqfr" path="res://assets/gungeon/enemy_gun.png" id="3_egun"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5h11f"]
+radius = 6.5
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1530286445 groups=["enemies"]]
+motion_mode = 1
+script = ExtResource("1_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1232237098]
+texture = ExtResource("1_7k104")
+
+[node name="WeaponPivot" type="Node2D" parent="."]
+position = Vector2(0, 2)
+z_index = 1
+
+[node name="GunSprite" type="Sprite2D" parent="WeaponPivot"]
+position = Vector2(7, 0)
+texture = ExtResource("3_egun")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=39550889]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_5h11f")

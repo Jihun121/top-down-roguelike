@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/destructible_prop.gd" id="1_propscript"]
+[ext_resource type="Texture2D" path="res://assets/Tiles/tile_0082.png" id="2_barreltex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_prop"]
+radius = 6.5
+
+[node name="DestructibleProp" type="StaticBody2D" groups=["destructibles"]]
+script = ExtResource("1_propscript")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_barreltex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_prop")

@@ -1,0 +1,28 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/treasure_chest.gd" id="1_chestscript"]
+[ext_resource type="Texture2D" uid="uid://dtftbtpoys7pt" path="res://assets/Tiles/tile_0089.png" id="2_chestclosed"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_chest"]
+radius = 14.0
+
+[node name="TreasureChest" type="Area2D" groups=["chests"]]
+script = ExtResource("1_chestscript")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_chestclosed")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_chest")
+
+[node name="HintLabel" type="Label" parent="."]
+offset_left = -48.0
+offset_top = -22.0
+offset_right = 48.0
+offset_bottom = -6.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 8
+text = "★ 보급 상자 (접근)"
+horizontal_alignment = 1

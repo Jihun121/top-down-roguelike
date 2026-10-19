@@ -1,0 +1,59 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_doorscript"]
+[ext_resource type="Texture2D" uid="uid://d2l082sq1lvff" path="res://assets/Tiles/tile_0046.png" id="2_door_l"]
+[ext_resource type="Texture2D" uid="uid://lgrxpwvi3cbr" path="res://assets/Tiles/tile_0047.png" id="3_door_r"]
+[ext_resource type="Texture2D" uid="uid://me4k4k5pb0ub" path="res://assets/Tiles/tile_0021.png" id="4_door_open"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doorblock"]
+size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doorsensor"]
+size = Vector2(28, 22)
+
+[node name="Door" type="StaticBody2D" groups=["doors"]]
+script = ExtResource("1_doorscript")
+
+[node name="ClosedVisual" type="Node2D" parent="."]
+
+[node name="LeftHalf" type="Sprite2D" parent="ClosedVisual"]
+position = Vector2(-8, 0)
+texture = ExtResource("2_door_l")
+
+[node name="RightHalf" type="Sprite2D" parent="ClosedVisual"]
+position = Vector2(8, 0)
+texture = ExtResource("3_door_r")
+
+[node name="OpenVisual" type="Node2D" parent="."]
+visible = false
+
+[node name="LeftOpen" type="Sprite2D" parent="OpenVisual"]
+position = Vector2(-8, 0)
+modulate = Color(0.65, 1, 0.75, 1)
+texture = ExtResource("4_door_open")
+
+[node name="RightOpen" type="Sprite2D" parent="OpenVisual"]
+position = Vector2(8, 0)
+flip_h = true
+modulate = Color(0.65, 1, 0.75, 1)
+texture = ExtResource("4_door_open")
+
+[node name="BlockCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_doorblock")
+
+[node name="ExitSensor" type="Area2D" parent="."]
+
+[node name="SensorCollision" type="CollisionShape2D" parent="ExitSensor"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_doorsensor")
+
+[node name="StatusLabel" type="Label" parent="."]
+offset_left = -36.0
+offset_top = -22.0
+offset_right = 36.0
+offset_bottom = -6.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 9
+text = "[잠김]"
+horizontal_alignment = 1

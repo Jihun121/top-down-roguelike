@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/boss_enemy.gd" id="1_bossscript"]
+[ext_resource type="Texture2D" uid="uid://fx27x4efe38d" path="res://assets/gungeon/boss_bullet_king.png" id="2_bosstex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_boss"]
+radius = 12.0
+
+[node name="BossEnemy" type="CharacterBody2D" groups=["boss", "enemies"]]
+motion_mode = 1
+script = ExtResource("1_bossscript")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_bosstex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_boss")

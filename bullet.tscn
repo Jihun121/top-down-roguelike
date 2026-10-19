@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b7ituw56furwp"]
+
+[ext_resource type="Script" uid="uid://coxrukfta0778" path="res://bullet.gd" id="1_v7oki"]
+[ext_resource type="Texture2D" uid="uid://daa0fpfjm4ei7" path="res://assets/gungeon/player_bullet.png" id="2_v8qja"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5h11f"]
+radius = 4.0
+
+[node name="Bullet" type="Area2D" unique_id=1674296642]
+script = ExtResource("1_v7oki")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1522901185]
+texture = ExtResource("2_v8qja")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1628499426]
+shape = SubResource("CircleShape2D_5h11f")

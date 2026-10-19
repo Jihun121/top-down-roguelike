@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b016h8pjupecy"]
+
+[ext_resource type="Texture2D" uid="uid://dce7d8p510uw4" path="res://assets/gungeon/gungeoneer.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dtholyfwt8dpm" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://b7ituw56furwp" path="res://bullet.tscn" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://calt0dgyew4cr" path="res://assets/gungeon/gun_pistol.png" id="3_guntex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_player"]
+radius = 6.0
+
+[node name="Player" type="CharacterBody2D" unique_id=276072439 groups=["player"]]
+motion_mode = 1
+script = ExtResource("1_onrkg")
+bullet_scene = ExtResource("2_i3pqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=90911649]
+texture = ExtResource("1_4flbx")
+
+[node name="WeaponPivot" type="Node2D" parent="."]
+position = Vector2(0, 2)
+z_index = 1
+
+[node name="GunSprite" type="Sprite2D" parent="WeaponPivot"]
+position = Vector2(9, 0)
+texture = ExtResource("3_guntex")
+
+[node name="MuzzleFlash" type="Polygon2D" parent="WeaponPivot/GunSprite"]
+visible = false
+position = Vector2(7, -1)
+color = Color(1, 0.96, 0.65, 1)
+polygon = PackedVector2Array(0, -3, 6, -2, 9, 0, 6, 2, 0, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1051326664]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_player")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=798560755]
+zoom = Vector2(1.5, 1.5)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
